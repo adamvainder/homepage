@@ -4,7 +4,7 @@
   "description": "homepage",
   "main": "hello-world-server.js",
   "scripts": {
-	"start": "node javascript/hello-world-server.js",
+	"start": "node javascript/HelloHttp.js",
     "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
   },
   "repository": "https://github.com/adamvainder/homepage",
