@@ -11,14 +11,14 @@ app.get('/',function(req,res){
 //		
 //	}
 //	else{
-		var htmldir=path.resolve('..','html');
+		var htmldir=path.resolve('.','html');
 		res.sendFile(path.join(htmldir+'/index.html'));
 	
 //}
 });
 
 app.get('/css/*',function(req,res){
-	var cssdir=path.resolve('..','css');
+	var cssdir=path.resolve('.','css');
 	var spliturl=req.url.split('/');
 	var filepath=spliturl.slice(2,spliturl.length).join('/');
 	 fs.readFile(cssdir+'/'+filepath, function (err, data) {
@@ -32,4 +32,4 @@ app.get('/css/*',function(req,res){
 
 app.listen(8888);
 
-console.log("Running at Port 3000");
+console.log("Running at Port 8888");
