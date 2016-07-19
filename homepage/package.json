@@ -7,7 +7,7 @@
 	"start": "node javascript/hello-world-server.js",
     "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
   },
-  "repository": "",
+  "repository": "https://github.com/adamvainder/homepage",
   "keywords": [
     "node.js",
     "eclipse",
@@ -16,7 +16,7 @@
   "dependencies": {
     "express": "^4.14.0"
   },
-  "author": "",
+  "author": "Adam Vainder",
   "license": "MIT",
   "readmeFilename": "README.md"
 }
