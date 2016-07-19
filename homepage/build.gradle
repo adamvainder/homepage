@@ -18,23 +18,48 @@
 */
 //println GradleVersion.current().prettyPrint()
 
+plugins {
+  id "com.eriwen.gradle.js" version "2.14.1"
+  id "com.eriwen.gradle.css" version "2.14.0"
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
+apply plugin: 'js'
+apply plugin: 'css'
 
 repositories {
 	maven {
         url "https://maven.java.net/content/repositories/public/"
     }
-    //mavenCentral()
+    mavenCentral()
     //jcenter()
 }
+
+
 
 dependencies {
     compile "com.oracle:avatar-js:0.10.25-SNAPSHOT"
     compile "com.oracle:libavatar-js-win-x64:0.10.25-SNAPSHOT"
     //compile fileTree(dir: 'libs', include: '*.jar')
     //testCompile "junit:junit:4.11"
+}
+
+javascript.source {
+    dev {
+        js {
+            srcDir "javascript"            
+            include "*.js"
+            exclude "*.min.js"
+        }
+    }
+   /* prod {
+        js {
+            srcDir javascript
+            include "*.min.js"
+        }
+    }*/
 }
 
 task copyLibs(type: Copy) {
